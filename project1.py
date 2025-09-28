@@ -22,8 +22,8 @@ questions = {
 }
 
 def python_trivia_game():
-    print("Welcome to the Python Trivia Game!")
-
+   questions_list = list(questions.keys())
+    random
 
 python_trivia_game()    
 python_trivia_game()  
