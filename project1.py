@@ -22,8 +22,12 @@ questions = {
 }
 
 def python_trivia_game():
-   questions_list = list(questions.keys())
-    random
+    questions_list = list(questions.keys())
+    total_questions = 5
+    score = 0
+
+    selected_questions = random.sample(questions_list, total_questions)
+    print(selected_questions)
 
 python_trivia_game()    
 python_trivia_game()  
