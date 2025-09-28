@@ -5,7 +5,7 @@
 # see if they are correct 
 #keep the socre 
 # tell the user their score
-
+#https://www.youtube.com/watch?v=ehD6tdxmjDU
 import random
 
 questions = {
@@ -27,7 +27,9 @@ def python_trivia_game():
     score = 0
 
     selected_questions = random.sample(questions_list, total_questions)
-    print(selected_questions)
+    
+    for idx, question in enumerate(selected_questions):
+        print(f"{idx + 1}. {question}")
+        user_answer = input()
 
-python_trivia_game()    
-python_trivia_game()  
+python_trivia_game()
