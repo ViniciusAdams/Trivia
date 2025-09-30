@@ -6,3 +6,17 @@
 
 # get all available characthers 
 # randomly pick characthers up to the lenght 
+# ensure we have at least one of each character type
+# ensure lenght is valid
+
+
+import random
+import string
+
+def generate_password():
+    lenght = int(input("Enter the disere password lenght").strip())
+    include_uppercase = input("Include uppercase letters? (yes/no)").strip().lower()
+    include_special = input("Include special letters? (yes/no)").strip().lower()
+    include_digitals = input("Include uppercase letters? (yes/no)").strip().lower()
+
+generate_password()   
