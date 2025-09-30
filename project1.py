@@ -31,6 +31,13 @@ def python_trivia_game():
     for idx, question in enumerate(selected_questions):
         print(f"{idx + 1}. {question}")
         user_answer = input("your answear:").lower().strip()
+        correct_answear = questions[question]
 
+        if user_answer == correct_answear.lower():
+            print("Correct!\n")
+            score += 1
+
+        else:
+            print(f"Wrong.The correct answear is: {correct_answear}. \n")
 
 python_trivia_game()
