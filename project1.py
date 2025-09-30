@@ -30,6 +30,7 @@ def python_trivia_game():
     
     for idx, question in enumerate(selected_questions):
         print(f"{idx + 1}. {question}")
-        user_answer = input()
+        user_answer = input("your answear:").lower().strip()
+
 
 python_trivia_game()
