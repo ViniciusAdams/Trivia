@@ -19,4 +19,7 @@ def generate_password():
     include_special = input("Include special letters? (yes/no)").strip().lower()
     include_digitals = input("Include uppercase letters? (yes/no)").strip().lower()
 
+    if lenght < 4:
+        print ("Password lenght must be at least 4 characthers")
+
 generate_password()   

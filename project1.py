@@ -5,7 +5,7 @@
 # see if they are correct 
 #keep the socre 
 # tell the user their score
-#https://www.youtube.com/watch?v=ehD6tdxmjDU
+
 import random
 
 questions = {
