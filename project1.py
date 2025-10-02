@@ -21,6 +21,8 @@ questions = {
      "Which module is commonly used for working with regular expressions in Python?": "re ",
 }
 
+   
+
 def python_trivia_game():
     questions_list = list(questions.keys())
     total_questions = 5
