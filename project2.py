@@ -49,4 +49,6 @@ def generate_password():
     return str_password
 
 password = generate_password()
-print(password) 
+print(password)
+
+#testing github actions
