@@ -3,15 +3,27 @@
 #list items
 #mark item as complete
 #save items
+import json
+
+file_name = "todo_list.json"
 
 def load_taks():
-    pass
-
-def save_taks():
+   try:
+        with open(file_name, "r") as file:
+            return json.load(file)
+   except:
+       return {"tasks":[]}
+       
+def save_taks(tasks):
     pass
 
 def view_taks():
-    pass
+    try:
+         with open(file_name, "w") as file:
+            return json.load(file)
+    except:
+       return {"tasks":[]}
+        
 
 def create_task():
     pass
@@ -21,7 +33,8 @@ def mark_task_complete():
 
 def main():
     tasks = load_taks()
-
+    print(tasks)
+    
     while True:
         print("\nTo-Do list Manager")
         print("1.View Task")
@@ -29,7 +42,7 @@ def main():
         print("3.Complete task")
         print("4.Exit")
         
-        choice = input ("Enter your choice").strip()
+        choice = input ("Enter your choice:").strip()
 
         if choice == "1":
             view_taks()
@@ -42,3 +55,5 @@ def main():
             break
         else:
             print("Invalid Choise, try again.")
+
+main()
