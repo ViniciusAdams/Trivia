@@ -12,8 +12,10 @@ def generate_password(length, include_uppercase, include_special, include_digits
     digits = string.digits if include_digits else ""
     all_characters = lower + uppercase + special + digits
 
-    if not all_characters:
-        raise ValueError("No character sets selected")
+    if not (include_uppercase or include_special or include_digits):
+        raise ValueError("At least one character set (uppercase, special, digits) must be selected")
+
+    all_characters = lower + uppercase + special + digits
 
     required_characters = []
     if include_uppercase:
