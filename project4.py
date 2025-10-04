@@ -18,3 +18,17 @@ def create_task():
 
 def mark_task_complete():
     pass
+
+def main():
+    tasks = load_taks()
+
+    while True:
+        print("\nTo-Do list Manager")
+        print("1.View Task")
+        print("2:Add task")
+        print("3.Complete task")
+        print("4.Exit")
+        
+        choice = input ("Enter your choice").strip()
+
+        if choice == "1":
