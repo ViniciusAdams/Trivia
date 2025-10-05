@@ -15,23 +15,32 @@ def load_taks():
        return {"tasks":[]}
        
 def save_taks(tasks):
-    pass
+    try:
+        with open(file_name, "w") as file:
+            json.dump(tasks, file)
+    except:
+       return {"tasks":[]}
 
 def view_taks():
     try:
-         with open(file_name, "w") as file:
-            return json.load(file)
+        with open(file_name, "w") as file:
+            json.dump(tasks, file)
     except:
        return {"tasks":[]}
-        
 
-def create_task():
-    pass
-
+def create_task(task):
+    description = input("Enter the task description:".strip())
+    if description:
+        tasks["tasks"].append({"description": description, "complete": False})
+        save_taks(tasks)
+        print("Task added.")
+    else:
+        print("Description cant be empty")
 def mark_task_complete():
     pass
 
 def main():
+    save_taks({"tasks": ["saved task"]})
     tasks = load_taks()
     print(tasks)
     
